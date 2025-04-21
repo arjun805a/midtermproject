@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ultimate Gourmet Haus</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* === HEADER === */
+header {
+  background: linear-gradient(135deg, #009688, #004d40); /* Gradient from teal to dark blue */
+  padding: 15px 0;  /* Reduced padding */
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap; /* Ensure items stay in a row */
+  padding: 0 20px;
+}
+
+.header-container .logo {
+  max-width: 100px; /* Reduced logo size */
+  display: block;
+}
+
+.left {
+  display: flex;
+  align-items: center; /* Vertically aligns the logo and site title */
+}
+
+.site-title {
+  font-family: 'Arial', cursive;
+  font-size: 2rem;  /* Adjust the size as needed */
+  color: #2f2d2d;  /* Pure white color */
+  margin-left: 15px;
+}
+
+/* Make sure the header elements are horizontally aligned */
+.center, .right {
+  display: flex;
+  align-items: center;
+}
+
+
+    /* Search Box Styling */
+    .search-input {
+      padding: 15px 40px;  /* Moderate padding for a balanced size */
+      width: 350px;  /* Adjusted width */
+      border-radius: 50px;  /* Rounded edges */
+      font-size: 1.2rem;  /* Slightly larger text */
+      border: 2px solid #ccc;
+      background: #fff;
+      color: #333;
+      transition: all 0.3s ease;
+    }
+
+    .search-input:focus {
+      border-color: #ffc107;
+      box-shadow: 0 0 10px rgba(255, 193, 7, 0.7);
+    }
+
+    /* Placeholder Styling */
+    .search-input::placeholder {
+      color: rgba(255, 255, 255, 0.7);  /* Lighter white color for the placeholder */
+      font-style: italic;  /* Italicized placeholder text */
+      font-size: 1.3rem;  /* Slightly larger font size for the placeholder */
+      transition: all 0.3s ease;
+    }
+
+    .search-input:focus::placeholder {
+      color: #ffc107;  /* Yellow placeholder text when focused */
+    }
+
+    /* Nav items styling and alignment */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;  /* Reduced gap */
+      padding: 0;
+      margin: 0;
+      justify-content: flex-end;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem; /* Reduced font size */
+      position: relative;
+      padding: 5px 10px;  /* Adjusted padding */
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #ffc107; /* Yellow hover */
+    }
+
+    nav a::after {
+      content: '';
+      display: block;
+      width: 0%;
+      height: 2px;
+      background: #ffc107;
+      transition: width 0.3s;
+      margin: auto;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* === FOOTER === */
+    footer {
+      background-color: #000;
+      color: #fff;
+      padding: 50px 20px; /* Increased from 30px */
+      margin-top: 60px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-container p {
+      margin: 0;
+      font-size: 1.1rem; /* Slightly larger font */
+    }
+
+    .social a img {
+      height: 30px; /* Increased from 24px */
+      margin-left: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <div class="left">
+        <img src="images/logo.png" alt="Logo" class="logo"/>
+        <h1 class="site-title">Ultimate Gourmet Haus</h1>
+      </div>
+      <div class="center">
+        <input type="text" class="search-input" placeholder="Search for your favorite dish..." />
+      </div>
+      <nav class="right">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html" class="active">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- === MAIN CONTENT === -->
+  <main>
+    <section class="menu-section">
+      <div class="container">
+        <h2>Our Menu</h2>
+
+        <!-- Category Template -->
+        <div class="menu-category">
+          <h3>Burgers</h3>
+          <div class="menu-items">
+            <div class="menu-card">
+              <img src="images/burger1.jpg" alt="Classic Haus Burger">
+              <h4>Classic Haus Burger</h4>
+              <p>Beef patty, Haus sauce, lettuce, tomato, pickles</p>
+              <span>$9.99</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/burger2.jpg" alt="Spicy Inferno">
+              <h4>Spicy Inferno</h4>
+              <p>Jalapeños, pepper jack cheese, hot sauce</p>
+              <span>$10.99</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/burger5.jpg" alt="Spicy Inferno">
+              <h4>Hamburgur</h4>
+              <p> consisting of fillings usually a patty of ground meat</p>
+              <span>$10.99</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/burger3.jpg" alt="Bacon BBQ Burger">
+              <h4>Bacon BBQ Burger</h4>
+              <p>Smoked bacon, cheddar cheese, BBQ sauce</p>
+              <span>$11.49</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/burger4.jpg" alt="Mushroom Swiss Burger">
+              <h4>Mushroom Burger</h4>
+              <p>Grilled mushrooms, Swiss cheese,</p>
+              <span>$10.79</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-category">
+          <h3>Chicken</h3>
+          <div class="menu-items">
+            <div class="menu-card">
+              <img src="images/chicken1.jpg" alt="Crispy Chicken Sandwich">
+              <h4> Chicken Sandwich</h4>
+              <p>Buttermilk fried chicken, lettuce.</p>
+              <span>$8.99</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/chicken2.jpg" alt="Buffalo Wings">
+              <h4>Buffalo Wings</h4>
+              <p>Spicy buffalo wings served with ranch dip</p>
+              <span>$10.49</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/chicken3.jpg" alt="Grilled Chicken Wrap">
+              <h4>Grilled Chicken Wrap</h4>
+              <p>Grilled chicken, veggies, creamy dressing</p>
+              <span>$9.49</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/chicken5.jpg" alt="Grilled Chicken Wrap">
+              <h4>Chicken Nuggets</h4>
+              <p> premium chicken breast </p>
+              <span>$9.49</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/chicken4.jpg" alt="Spicy Chicken Tenders">
+              <h4>Spicy Chicken</h4>
+              <p>Crispy tenders served with your choice of dip</p>
+              <span>$8.79</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-category">
+          <h3>Pizza</h3>
+          <div class="menu-items">
+            <div class="menu-card">
+              <img src="images/pizza1.jpg" alt="Margherita">
+              <h4>Margherita</h4>
+              <p>Tomato, mozzarella, basil</p>
+              <span>$11.99</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/pizza2.jpg" alt="Pepperoni Feast">
+              <h4>Pepperoni Feast</h4>
+              <p>Loaded with premium pepperoni and cheese</p>
+              <span>$12.99</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/pizza3.jpg" alt="Pepperoni Feast">
+              <h4>Detroit pizza</h4>
+              <p> topped with brick cheese, pepperoni, and red sauce</p>
+              <span>$12.99</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/pizza4.jpg" alt="BBQ Chicken Pizza">
+              <h4>BBQ Chicken Pizza</h4>
+              <p>BBQ sauce, grilled chicken, red onions</p>
+              <span>$13.49</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/pizza5.jpg" alt="Veggie Delight">
+              <h4>Veggie Delight</h4>
+              <p>Bell peppers, olives, mushrooms, onions</p>
+              <span>$11.49</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-category">
+          <h3>Pasta</h3>
+          <div class="menu-items">
+            <div class="menu-card">
+              <img src="images/pasta1.jpg" alt="Garlic Shrimp Linguine">
+              <h4>Garlic Shrimp </h4>
+              <p>Fresh linguine, shrimp, garlic butter </p>
+              <span>$13.49</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/pasta2.jpg" alt="Creamy Alfredo">
+              <h4>Creamy Alfredo</h4>
+              <p>Fettuccine with creamy Alfredo sauce</p>
+              <span>$11.49</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/pasta3.jpg" alt="Creamy Alfredo">
+              <h4>Farfalle</h4>
+              <p>short, shaped pasta with a distinctive butterfly</p>
+              <span>$14.49</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/pasta4.jpg" alt="Spaghetti Bolognese">
+              <h4>Spaghetti Bolognese</h4>
+              <p>Ground beef, rich tomato sauce</p>
+              <span>$12.49</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/pasta5.jpg" alt="Mac & Cheese">
+              <h4>Mac & Cheese</h4>
+              <p>Classic mac with a creamy cheese blend</p>
+              <span>$9.99</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-category">
+          <h3>Fries</h3>
+          <div class="menu-items">
+            <div class="menu-card">
+              <img src="images/fries.jpg" alt="Haus Fries">
+              <h4>Haus Fries</h4>
+              <p>Golden, crispy seasoned fries</p>
+              <span>$4.99</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/onionrings.jpg" alt="Onion Rings">
+              <h4>Onion Rings</h4>
+              <p>Beer-battered rings served with ranch</p>
+              <span>$5.99</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/onionrings1.jpg" alt="Onion Rings">
+              <h4>Curly fries</h4>
+              <p>Curly fries, or twisted fries are french fries cut into a spiral shape</p>
+              <span>$5.99</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/fries2.jpg" alt="Coleslaw">
+              <h4>Coleslaw</h4>
+              <p>Creamy, tangy slaw</p>
+              <span>$3.99</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/fries3.jpg" alt="Sweet Potato Fries">
+              <h4>Sweet Potato Fries</h4>
+              <p>Served with chipotle mayo</p>
+              <span>$5.49</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-category">
+          <h3>Desserts</h3>
+          <div class="menu-items">
+            <div class="menu-card">
+              <img src="images/cake1.jpg" alt="Chocolate Brownie">
+              <h4>Chocolate Brownie</h4>
+              <p>Rich chocolate brownie with ice cream</p>
+              <span>$4.99</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/cake2.jpg" alt="Strawberry Cheesecake">
+              <h4>Strawberry cake</h4>
+              <p> cheesecake with strawberry</p>
+              <span>$5.49</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/cake3.jpg" alt="Ice Cream Sundae">
+              <h4>Ice Cream Sundae</h4>
+              <p>Vanilla ice cream, chocolate sauce, nuts</p>
+              <span>$3.99</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/cake4.jpg" alt="Ice Cream Sundae">
+              <h4>Vanilla cake</h4>
+              <p>classic dessert characterized by its distinct vanilla flavor</p>
+              <span>$3.99</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/cake5.jpg" alt="Chocolate Lava Cake">
+              <h4>Chocolate Lava Cake</h4>
+              <p>Molten chocolate cake served warm</p>
+              <span>$5.99</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-category">
+          <h3>Drinks</h3>
+          <div class="menu-items">
+            <div class="menu-card">
+              <img src="images/drink1.jpg" alt="Soda">
+              <h4>Soda</h4>
+              <p>Pepsi, 7UP, Mountain Dew, Mirinda</p>
+              <span>$1.99</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/drink2.jpg" alt="Iced Tea">
+              <h4>Iced Tea</h4>
+              <p>Freshly brewed iced tea</p>
+              <span>$2.49</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/drink3.jpg" alt="Milkshake">
+              <h4>lemonade</h4>
+              <p>Beverage of sweetened lemon juice mixed with water</p>
+              <span>$3.99</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/drink4.jpg" alt="Milkshake">
+              <h4>Milkshake</h4>
+              <p>Vanilla, chocolate, or strawberry milkshake</p>
+              <span>$3.99</span>
+            </div>
+            <div class="menu-card">
+              <img src="images/drink5.jpg" alt="Coffee">
+              <h4>Coffee</h4>
+              <p>Freshly brewed coffee</p>
+              <span>$2.49</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2024 Ultimate Gourmet Haus. All rights reserved.</p>
+      <div class="social">
+        <a href="#"><img src="images/facebook-icon.png" alt="Facebook" /></a>
+        <a href="#"><img src="images/instagram-icon.png" alt="Instagram" /></a>
+        <a href="#"><img src="images/twitter-icon.png" alt="Twitter" /></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

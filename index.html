@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ultimate Gourmet Haus</title>
+
+  <!-- External CSS for main content -->
+  <link rel="stylesheet" href="style.css" />
+  
+
+  <style>
+    /* === HEADER === */
+header {
+  background: linear-gradient(135deg, #009688, #004d40); /* Gradient from teal to dark blue */
+  padding: 15px 0;  /* Reduced padding */
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap; /* Ensure items stay in a row */
+  padding: 0 20px;
+}
+
+.header-container .logo {
+  max-width: 100px; /* Reduced logo size */
+  display: block;
+}
+
+.left {
+  display: flex;
+  align-items: center; /* Vertically aligns the logo and site title */
+}
+
+.site-title {
+  font-family: 'Arial', cursive;
+  font-size: 2rem;  /* Adjust the size as needed */
+  color: #2f2d2d;  /* Pure white color */
+  margin-left: 15px;
+}
+
+/* Make sure the header elements are horizontally aligned */
+.center, .right {
+  display: flex;
+  align-items: center;
+}
+
+
+    /* Search Box Styling */
+    .search-input {
+      padding: 15px 40px;  /* Moderate padding for a balanced size */
+      width: 350px;  /* Adjusted width */
+      border-radius: 50px;  /* Rounded edges */
+      font-size: 1.2rem;  /* Slightly larger text */
+      border: 2px solid #ccc;
+      background: #fff;
+      color: #333;
+      transition: all 0.3s ease;
+    }
+
+    .search-input:focus {
+      border-color: #ffc107;
+      box-shadow: 0 0 10px rgba(255, 193, 7, 0.7);
+    }
+
+    /* Placeholder Styling */
+    .search-input::placeholder {
+      color: rgba(255, 255, 255, 0.7);  /* Lighter white color for the placeholder */
+      font-style: italic;  /* Italicized placeholder text */
+      font-size: 1.3rem;  /* Slightly larger font size for the placeholder */
+      transition: all 0.3s ease;
+    }
+
+    .search-input:focus::placeholder {
+      color: #ffc107;  /* Yellow placeholder text when focused */
+    }
+
+    /* Nav items styling and alignment */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;  /* Reduced gap */
+      padding: 0;
+      margin: 0;
+      justify-content: flex-end;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem; /* Reduced font size */
+      position: relative;
+      padding: 5px 10px;  /* Adjusted padding */
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #ffc107; /* Yellow hover */
+    }
+
+    nav a::after {
+      content: '';
+      display: block;
+      width: 0%;
+      height: 2px;
+      background: #ffc107;
+      transition: width 0.3s;
+      margin: auto;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* === FOOTER === */
+    footer {
+      background-color: #000;
+      color: #fff;
+      padding: 50px 20px; /* Increased from 30px */
+      margin-top: 60px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-container p {
+      margin: 0;
+      font-size: 1.1rem; /* Slightly larger font */
+    }
+
+    .social a img {
+      height: 30px; /* Increased from 24px */
+      margin-left: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <div class="left">
+        <img src="images/logo.png" alt="Logo" class="logo"/>
+        <h1 class="site-title">Ultimate Gourmet Haus</h1>
+      </div>
+      <div class="center">
+        <input type="text" class="search-input" placeholder="Search for your favorite dish..." />
+      </div>
+      <nav class="right">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About </a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h2>Delights That Define Gourmet</h2>
+        <p>Indulge in artisan pizzas, handcrafted sushi, and savory pasta dishes made with fresh, premium ingredients.</p>
+        <div class="buttons">
+          <a href="menu.html" class="btn primary">Explore Menu</a>
+          <a href="about.html" class="btn secondary">Learn More</a>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Chef's Picks Section -->
+    <section class="featured">
+      <div class="container">
+        <h2>Chef's Picks</h2>
+        <div class="grid">
+          <article>
+            <img src="images/pizza1.jpg" alt="Artisan Pizza" />
+            <h3>Truffle Margherita Pizza</h3>
+            <p>Wood-fired crust, San Marzano tomatoes, mozzarella, and a drizzle of truffle oil.</p>
+          </article>
+          <article>
+            <img src="images/sushi.jpg" alt="Sushi Platter" />
+            <h3>Signature Sushi Platter</h3>
+            <p>A curated selection of fresh sashimi, nigiri, and specialty rolls.</p>
+          </article>
+          <article>
+            <img src="images/steak.jpg" alt="Sushi Platter" />
+            <h3>Signature steak</h3>
+            <p>a cut of meat sliced across muscle fibers, sometimes including a bone.</p>
+          </article>
+          <article>
+            <img src="images/pasta.jpg" alt="Pasta Dish" />
+            <h3>Garlic Shrimp Linguine</h3>
+            <p>Fresh linguine tossed in garlic butter sauce with succulent shrimp and herbs.</p>
+          </article>
+          <!-- New Row -->
+          <article>
+            <img src="images/steak1.jpg" alt="Grilled Steak" />
+            <h3>Herb-Crusted Ribeye</h3>
+            <p>Juicy ribeye grilled to perfection, seasoned with rosemary and thyme.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Best Sellers Section -->
+    <section class="featured alt-bg">
+      <div class="container">
+        <h2>Our Best Sellers</h2>
+        <div class="grid">
+          <article>
+            <img src="images/burger.jpg" alt="Gourmet Burger" />
+            <h3>Gourmet Angus Burger</h3>
+            <p>Juicy grilled Angus patty with cheddar, lettuce, and our secret sauce.</p>
+          </article>
+          <article>
+            <img src="images/chees.jpg" alt="Gourmet Burger" />
+            <h3>Casseroles.</h3>
+            <p>baked food with three main components: pieces of meat, various chopped or canned vegetables  and a starchy binder</p>
+          </article>
+          <article>
+            <img src="images/cake5.jpg" alt="Dessert" />
+            <h3>Molten Lava Cake</h3>
+            <p>Rich chocolate cake with gooey molten center served with vanilla ice cream.</p>
+          </article>
+          <article>
+            <img src="images/salad.jpg" alt="Fresh Salad" />
+            <h3>Mediterranean Salad</h3>
+            <p>Fresh greens tossed with olives, feta, cherry tomatoes, and vinaigrette.</p>
+          </article>
+          <!-- New Row -->
+          <article>
+            <img src="images/wings.jpg" alt="Chicken Wings" />
+            <h3>Spicy Chicken Wings</h3>
+            <p>Glazed wings with a kick of heat and served with cool ranch dip.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2024 Ultimate Gourmet Haus. All rights reserved.</p>
+      <div class="social">
+        <a href="#"><img src="images/facebook-icon.png" alt="Facebook" /></a>
+        <a href="#"><img src="images/instagram-icon.png" alt="Instagram" /></a>
+        <a href="#"><img src="images/twitter-icon.png" alt="Twitter" /></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
