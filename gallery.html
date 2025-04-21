@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ultimate Gourmet Haus | Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+   /* === HEADER === */
+header {
+  background: linear-gradient(135deg, #009688, #004d40); /* Gradient from teal to dark blue */
+  padding: 15px 0;  /* Reduced padding */
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap; /* Ensure items stay in a row */
+  padding: 0 20px;
+}
+
+.header-container .logo {
+  max-width: 100px; /* Reduced logo size */
+  display: block;
+}
+
+.left {
+  display: flex;
+  align-items: center; /* Vertically aligns the logo and site title */
+}
+
+.site-title {
+  font-family: 'Arial', cursive;
+  font-size: 2rem;  /* Adjust the size as needed */
+  color: #2f2d2d;  /* Pure white color */
+  margin-left: 15px;
+}
+
+/* Make sure the header elements are horizontally aligned */
+.center, .right {
+  display: flex;
+  align-items: center;
+}
+
+    .search-input {
+      padding: 15px 40px;
+      width: 350px;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      border: 2px solid #ccc;
+      background: #fff;
+      color: #333;
+      transition: all 0.3s ease;
+    }
+
+    .search-input:focus {
+      border-color: #ffc107;
+      box-shadow: 0 0 10px rgba(255, 193, 7, 0.7);
+    }
+
+    .search-input::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+      font-style: italic;
+      font-size: 1.3rem;
+    }
+
+    .search-input:focus::placeholder {
+      color: #ffc107;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      padding: 0;
+      margin: 0;
+      justify-content: flex-end;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      position: relative;
+      padding: 5px 10px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #ffc107;
+    }
+
+    nav a::after {
+      content: '';
+      display: block;
+      width: 0%;
+      height: 2px;
+      background: #ffc107;
+      transition: width 0.3s;
+      margin: auto;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    footer {
+      background-color: #000;
+      color: #fff;
+      padding: 50px 20px;
+      margin-top: 60px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-container p {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    .social a img {
+      height: 30px;
+      margin-left: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <div class="left">
+        <img src="images/logo.png" alt="Logo" class="logo" />
+        <h1 class="site-title">Ultimate Gourmet Haus</h1>
+      </div>
+      <div class="center">
+        <input type="text" class="search-input" placeholder="Search for your favorite dish..." />
+      </div>
+      <nav class="right">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <top>
+    <section class="gallery-section">
+      <div class="container">
+        <h2>Food Gallery</h2>
+        <p>Take a look at some of our delicious creations</p>
+
+        <div class="gallery-grid">
+          <figure>
+            <img src="images/burger1.jpg" alt="Classic Haus Burger">
+            <figcaption>Classic Haus Burger</figcaption>
+          </figure>
+          <figure>
+            <img src="images/burger2.jpg" alt="Spicy Inferno Burger">
+            <figcaption>Spicy Inferno</figcaption>
+          </figure>
+          <figure>
+            <img src="images/burger3.jpg" alt="Mushroom Melt Burger">
+            <figcaption>Mushroom Melt</figcaption>
+          </figure>
+          <figure>
+            <img src="images/fries.jpg" alt="Haus Fries">
+            <figcaption>Haus Fries with Special Seasoning</figcaption>
+          </figure>
+          <figure>
+            <img src="images/drink4.jpg" alt="Chocolate Milkshake">
+            <figcaption>Chocolate Milkshake</figcaption>
+          </figure>
+          <figure>
+            <img src="images/cafe-interior.jpg" alt="Restaurant Interior">
+            <figcaption>Our Cozy Dining Area</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+</top>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2024 Ultimate Gourmet Haus. All rights reserved.</p>
+      <div class="social">
+        <a href="#"><img src="images/facebook-icon.png" alt="Facebook" /></a>
+        <a href="#"><img src="images/instagram-icon.png" alt="Instagram" /></a>
+        <a href="#"><img src="images/twitter-icon.png" alt="Twitter" /></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
