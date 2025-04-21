@@ -101,3 +101,30 @@ main {
     color: #666;
     margin-top: 10px;
   }
+  .featured.alt-bg {
+    background-color: #f9f9f9;
+  }
+  
+  .featured.alt-bg h2 {
+    color: #333;
+  }
+  
+  .featured.alt-bg article {
+    background-color: #fafafa;
+  }
+  
+  /* === Responsive Styles === */
+  @media (max-width: 768px) {
+    .hero h2 {
+      font-size: 2.5rem;
+    }
+  
+    .hero p {
+      font-size: 1.1rem;
+    }
+  
+    .featured .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
