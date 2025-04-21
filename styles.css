@@ -1,0 +1,103 @@
+/* === MAIN === */
+main {
+    padding: 40px 20px;
+    background-color: #413e3e;
+  }
+  /* === Hero Section === */
+.hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    background-color: rgba(0, 0, 0, 0.5); /* Adding a dark overlay if the background image is too bright */
+    color: #faf8f8;
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 400px; /* Ensure the section has enough height */
+  }
+  
+  .hero h2 {
+    font-family: 'Alfa Slab One', serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color:rgb(251, 249, 249);
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-weight: 400;
+    color: #fbf9f9;
+  }
+  
+  .hero .buttons a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
+  
+  .hero .buttons .primary {
+    background-color: #ffc107;
+    color: #000;
+  }
+  
+  .hero .buttons .secondary {
+    background-color: transparent;
+    border: 2px solid #ffc107;
+    color: #ffc107;
+  }
+  
+  .hero .buttons a:hover {
+    background-color: #f57c00;
+    color: #fff;
+  }
+  
+  /* === Featured Section === */
+  .featured {
+    padding: 60px 20px;
+    background-color: #fff;
+  }
+  
+  .featured h2 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .featured .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+  }
+  
+  .featured article {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .featured img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .featured h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  .featured p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+  }
